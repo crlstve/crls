@@ -1,12 +1,13 @@
 // Callback global para reCAPTCHA
 window.recaptchaCallback = function() {
-    console.log('reCAPTCHA cargado correctamente');
+    document.getElementById('recaptcha-error').classList.add('hidden');
+    document.dispatchEvent(new Event('recaptcha:changed'));
 };
 
 window.recaptchaExpiredCallback = function() {
-    console.log('reCAPTCHA expirado');
     document.getElementById('recaptcha-error').textContent = 'La verificación reCAPTCHA ha expirado. Por favor, verifica nuevamente.';
     document.getElementById('recaptcha-error').classList.remove('hidden');
+    document.dispatchEvent(new Event('recaptcha:changed'));
 };
 
 //Con el Dom cargado
@@ -46,9 +47,17 @@ document.addEventListener('DOMContentLoaded', function () {
     //close modal button
         modal.addEventListener('click', (e) => { if (e.target === modal) { modal.classList.add('hidden'); } });
     //form
-    const form = document.querySelector('form');
-    const inputs = form.querySelectorAll('input[type="text"], input[type="email"], textarea');
-    const submitButton = form.querySelector('input[type="submit"]');
+    const contactForm = document.querySelector('#modal form');
+    const inputs = contactForm.querySelectorAll('input[required], textarea[required]');
+    const submitButton = contactForm.querySelector('input[type="submit"]');
+    const errorMessage = document.getElementById('error');
+    const recaptchaError = document.getElementById('recaptcha-error');
+    const successMessage = document.getElementById('success');
+
+    function showError(message) {
+        errorMessage.textContent = message;
+        errorMessage.classList.remove('hidden');
+    }
     //Validación de campos
     inputs.forEach(input => {
         input.addEventListener('blur', function () {
@@ -73,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // Función para actualizar el estado del botón de envío
     function updateSubmitButton() {
-        if (checkAllFields()) {
+        if (checkAllFields() && checkRecaptcha()) {
             submitButton.classList.remove('btnError');
             submitButton.classList.add('btnSuccess');
             submitButton.disabled = false;
@@ -87,70 +96,77 @@ document.addEventListener('DOMContentLoaded', function () {
     inputs.forEach(input => {
         input.addEventListener('input', updateSubmitButton);
     });
+    document.addEventListener('recaptcha:changed', updateSubmitButton);
     // Evento submit del formulario
-    form.addEventListener('submit', function (e) {
+    contactForm.addEventListener('submit', async function (e) {
         e.preventDefault();
         
         // Ocultar mensajes de error previos
-        document.getElementById('error').classList.add('hidden');
-        document.getElementById('recaptcha-error').classList.add('hidden');
+        errorMessage.classList.add('hidden');
+        recaptchaError.classList.add('hidden');
         
         if (!checkAllFields()) {
-            document.getElementById('error').classList.remove('hidden');
+            showError('Por favor, completa todos los campos.');
             return;
         }
         
-        // if (!checkRecaptcha()) {
-        //     document.getElementById('recaptcha-error').classList.remove('hidden');
-        //     return;
-        // }
-        
-        const result = document.getElementById('success');
-        const form = document.querySelector('form');
-        form.classList.add('hidden');
-        result.classList.remove('hidden');
+        if (!checkRecaptcha()) {
+            recaptchaError.classList.remove('hidden');
+            updateSubmitButton();
+            return;
+        }
+
+        submitButton.disabled = true;
+        submitButton.classList.remove('btnSuccess');
+        submitButton.classList.add('btnError');
 
         // Recoger los datos del formulario y crear un objeto
-        var data = {
-            nombre: form.querySelector('[name="name"]').value,
-            email: form.querySelector('[name="email"]').value,
-            phone: form.querySelector('[name="phone"]').value,                
-            subject: form.querySelector('[name="subject"]').value,
-            message: form.querySelector('[name="message"]').value,
-            'g-recaptcha-response': ''
+        const data = {
+            nombre: contactForm.querySelector('[name="name"]').value.trim(),
+            email: contactForm.querySelector('[name="email"]').value.trim(),
+            phone: contactForm.querySelector('[name="phone"]').value.trim(),
+            subject: contactForm.querySelector('[name="subject"]').value.trim(),
+            message: contactForm.querySelector('[name="message"]').value.trim(),
+            company: contactForm.querySelector('[name="company"]').value.trim(),
+            'g-recaptcha-response': grecaptcha.getResponse()
         };
-        
-        // Crear un objeto XMLHttpRequest
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', './controllers/contact.php', true);
-        console.log(data);
-        // Configurar el encabezado para indicar que el cuerpo de la petición es JSON
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        
-        // Manejar la respuesta
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    try {
-                        const response = JSON.parse(xhr.responseText);
-                        if (response.status === 'error') {
-                            // Mostrar error y restaurar el formulario
-                            form.classList.remove('hidden');
-                            result.classList.add('hidden');
-                            document.getElementById('error').textContent = response.message;
-                            document.getElementById('error').classList.remove('hidden');
-                            // Reset reCAPTCHA
-                            grecaptcha.reset();
-                        }
-                    } catch (e) {
-                        console.error('Error parsing response:', e);
-                    }
+
+        try {
+            const response = await fetch('./controllers/contact.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            const payload = await response.json();
+
+            if (!response.ok || payload.status !== 'success') {
+                showError(payload.message || 'No se pudo enviar el formulario.');
+                if (typeof grecaptcha !== 'undefined') {
+                    grecaptcha.reset();
                 }
+                updateSubmitButton();
+                return;
             }
+
+            contactForm.reset();
+            contactForm.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+            if (typeof grecaptcha !== 'undefined') {
+                grecaptcha.reset();
+            }
+        } catch (error) {
+            console.error('Error sending contact form:', error);
+            showError('No se pudo enviar el formulario. Inténtalo de nuevo en unos minutos.');
+            if (typeof grecaptcha !== 'undefined') {
+                grecaptcha.reset();
+            }
+        } finally {
+            updateSubmitButton();
         };
-        
-        // Enviar los datos como JSON
-        xhr.send(JSON.stringify(data));
     });
     
     // Actualizar el estado inicial del botón
