@@ -85,7 +85,29 @@ p,span,label,li,td,th {
             @apply -rotate-140;
         }
         .card{
-            @apply relative flex flex-col h-fit gap-3 p-6 border border-slate-200 dark:border-dark-border backdrop-blur-sm;
+            @apply relative flex flex-col h-fit gap-3 p-6 xl:p-8 min-w-0 border border-slate-200 dark:border-dark-border backdrop-blur-sm;
+        }
+        .tags{
+            @apply flex flex-wrap gap-2;
+        }
+        .tag{
+            @apply text-xs leading-none px-2 py-1 border border-slate-200 dark:border-dark-border backdrop-blur-sm text-gray-600 dark:text-white/80;
+        }
+        /* Cabecera de card con título vertical (abajo->arriba) y línea a media altura */
+        .card-body{
+            @apply flex flex-row gap-4 min-w-0;
+        }
+        .card-content{
+            @apply flex flex-col gap-3 flex-1 min-w-0;
+        }
+        .card-head{
+            @apply flex flex-col items-center gap-3 shrink-0;
+        }
+        .card-title{
+            @apply font-bold text-lg leading-none tracking-[0.25em] [writing-mode:vertical-rl] rotate-180;
+        }
+        .card-title-line{
+            @apply w-px h-8 shrink-0 bg-slate-300 dark:bg-dark-border;
         }
             .writing-lr {
                   writing-mode: vertical-lr;
