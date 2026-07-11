@@ -43,7 +43,7 @@ p,span,label,li,td,th {
 }
 
     .btn_nav{
-        @apply text-gray-600 text-center self-center font-semibold dark:text-white text-base md:text-sm relative md:border border-slate-200 hover:border-dark-border hover:dark:border-slate-950 dark:border-dark-border backdrop-blur hover:backdrop-blur-none flex justify-center px-4 py-1 dark:hover:text-primary hover:text-red mb-4 md:mb-0;
+        @apply text-gray-600 text-center self-center font-semibold dark:text-white text-base md:text-sm relative md:border border-slate-200 hover:border-dark-border hover:dark:border-primary dark:border-dark-border backdrop-blur hover:backdrop-blur-none flex justify-center px-4 py-1 dark:hover:text-primary hover:text-red mb-4 md:mb-0;
     }
     /*Form*/
         .btnError{ 
@@ -85,7 +85,7 @@ p,span,label,li,td,th {
             @apply -rotate-140;
         }
         .card{
-            @apply relative flex flex-col h-fit gap-3 p-6 xl:p-8 min-w-0 border border-slate-200 dark:border-dark-border backdrop-blur-sm;
+            @apply relative flex flex-col h-fit gap-3 p-6 xl:pl-4 xl:py-8 xl:pr-8 min-w-0 border border-slate-200 dark:border-dark-border backdrop-blur-sm;
         }
         .tags{
             @apply flex flex-wrap gap-2;
@@ -104,7 +104,7 @@ p,span,label,li,td,th {
             @apply flex flex-col items-center gap-3 shrink-0;
         }
         .card-title{
-            @apply font-bold text-lg leading-none tracking-[0.25em] [writing-mode:vertical-rl] rotate-180;
+            @apply font-bold leading-none tracking-[0.25em] [writing-mode:vertical-rl] rotate-180;
         }
         .card-title-line{
             @apply w-px h-8 shrink-0 bg-slate-300 dark:bg-dark-border;
