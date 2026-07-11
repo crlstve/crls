@@ -5,8 +5,8 @@
         <div class=" snap-y snap-mandatory ">
             <ul class="timeline grid grid-cols-1 xl:grid-cols-12 gap-6 xl:gap-24 xl:my-12 bg-transparent relative">
                 <!-- Cámara Valencia -->
-                <li class="p-2 xl:p-0 snap-always xl:col-span-6 fadeInUp visible relative grid grid-cols-12 bg-transparent">
-                    <article class="card col-span-12 xl:col-span-10 z-10 backdrop-blur-sm relative">
+                <li class="p-2 xl:p-0 snap-always xl:col-span-6 fadeInUp visible relative grid grid-cols-12 bg-transparent backdrop-blur-sm">
+                    <article class="card col-span-12 xl:col-span-10 z-10 relative">
                         <a rel="nofollow noopener noreferrer" target="_blank" aria-label="Visita la web de Cámara Valencia" href="https://www.camaravalencia.com/" class="link-right">
                             <?= Functions::svg(); ?>
                         </a>
@@ -40,7 +40,7 @@
                     </span> 
                 </li>
                 <!-- Idital -->
-                <li class="p-2 xl:p-0 fadeInUp visible relative flex flex-col-reverse xl:grid grid-cols-12 snap-always xl:col-span-6 xl:mt-28">                  
+                <li class="p-2 xl:p-0 fadeInUp visible relative flex flex-col-reverse xl:grid grid-cols-12 snap-always xl:col-span-6 xl:mt-28 backdrop-blur-sm">                  
                     <span class="w-fit h-fit py-2 px-6 top-0 xl:col-span-3 col-span-12  text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute left-0 xl:-ml-23 backdrop-blur-sm">04/25<br>10/24</span>
                     <span class="border-slate-200 dark:border-dark-border border-t-1 w-full h-1 col-span-1 hidden xl:block xl:col-span-2 mt-4">
                     </span> 
@@ -70,7 +70,7 @@
                     </article>
                 </li>
                 <!-- Founderz -->
-                <li class="p-2 xl:p-0 snap-always xl:col-span-6 fadeInUp relative grid grid-cols-12 xl:-mt-[192px]">
+                <li class="p-2 xl:p-0 snap-always xl:col-span-6 fadeInUp relative grid grid-cols-12 backdrop-blur-sm">
 
                     <article class="card col-span-12 xl:col-span-10 z-10 backdrop-blur-sm">
                         <a rel="nofollow noopener noreferrer" target="_blank" aria-label="Visita la web de Founderz" href="https://founderz.com/" class="link-right">
@@ -101,7 +101,7 @@
                     <span class="w-fit h-fit py-2 px-6 top-0 xl:col-span-3 col-span-12  text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute right-0 xl:-mr-23 backdrop-blur-sm">09/24<br>04/24</span>
                 </li>
                 <!-- Sesame HR -->
-                <li class="p-2 xl:p-0 fadeInUp relative flex flex-col-reverse xl:grid grid-cols-12 snap-always xl:col-span-6 xl:-mt-20">
+                <li class="p-2 xl:p-0 fadeInUp relative flex flex-col-reverse xl:grid grid-cols-12 snap-always xl:col-span-6 xl:-mt-20 backdrop-blur-sm">
                     <span class="w-fit h-fit py-2 px-6 top-0 xl:col-span-3 col-span-12  text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute left-0 xl:-ml-23 backdrop-blur-sm">04/24<br>06/22</span>                     <span class="border-slate-200 dark:border-dark-border border-t-1 w-full h-1 col-span-1 hidden xl:block xl:col-span-2 mt-4">
                     </span> 
                     <article class="card col-span-12 xl:col-span-10 xl:col-start-3 z-10 backdrop-blur-sm">
@@ -130,7 +130,7 @@
                     </article>
                 </li>
                 <!-- Arte Regal -->
-                <li class="p-2 xl:p-0 snap-always xl:col-span-6 fadeInUp relative grid grid-cols-12 xl:-mt-[232px]">
+                <li class="p-2 xl:p-0 snap-always xl:col-span-6 fadeInUp relative grid grid-cols-12 xl:-mt-[232px] backdrop-blur-sm">
                     <article class="card col-span-12 xl:col-span-10 z-10 backdrop-blur-sm">                    
                         <a rel="nofollow noopener noreferrer" target="_blank" aria-label="Visita la web de Arte Regal Import" href="https://www.arteregal.com/" class="link-right">
                             <?= Functions::svg(); ?>
@@ -159,7 +159,7 @@
                     <span class="w-fit h-fit py-2 px-6 top-0 xl:col-span-3 col-span-12  text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute right-0 xl:-mr-23 backdrop-blur-sm">06/22<br>10/20</span>
                 </li>
                 <!-- Availand -->
-                <li class="p-2 xl:p-0 fadeInUp relative flex flex-col-reverse xl:grid grid-cols-12 snap-always xl:col-span-6 xl:-mt-20">
+                <li class="p-2 xl:p-0 fadeInUp relative flex flex-col-reverse xl:grid grid-cols-12 snap-always xl:col-span-6 xl:-mt-20 backdrop-blur-sm">
                     <span class="w-fit h-fit py-2 px-6 top-0 xl:col-span-3 col-span-12  text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute left-0 xl:-ml-23 backdrop-blur-sm">06/20<br>05/19</span>                     <span class="border-slate-200 dark:border-dark-border border-t-1 w-full h-1 col-span-1 hidden xl:block xl:col-span-2 mt-4">
                     </span> 
                     <article class="card col-span-12 xl:col-span-10 xl:col-start-3 z-10 backdrop-blur-sm">
@@ -187,7 +187,7 @@
                     </article>
                 </li>
                 <!-- Tv Begin -->
-                <li class="p-2 xl:p-0 snap-always xl:col-span-6 fadeInUp relative grid grid-cols-12 xl:-mt-[209px]">  
+                <li class="p-2 xl:p-0 snap-always xl:col-span-6 fadeInUp relative grid grid-cols-12 xl:-mt-[209px] backdrop-blur-sm">  
                     <article class="card col-span-12 xl:col-span-10 z-10 backdrop-blur-sm">                    
                         <a rel="nofollow noopener noreferrer" target="" aria-label="Visita la web de Tv Begin" href="https://tvbgn.com/" class="link-right">
                             <?= Functions::svg(); ?>
@@ -216,7 +216,7 @@
                     <span class="w-fit h-fit py-2 px-6 top-0 xl:col-span-3 col-span-12  text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute right-0 xl:-mr-23 backdrop-blur-sm">05/19<br>09/17</span>
                 </li>
                 <!-- Galaxa Cosmetics -->
-                <li class="p-2 xl:p-0 fadeInUp relative flex flex-col-reverse xl:grid grid-cols-12 snap-always xl:col-span-6 xl:-mt-20">
+                <li class="p-2 xl:p-0 fadeInUp relative flex flex-col-reverse xl:grid grid-cols-12 snap-always xl:col-span-6 xl:-mt-20 backdrop-blur-sm">
                     <span class="w-fit h-fit py-2 px-6 top-0 xl:col-span-3 col-span-12  text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute left-0 xl:-ml-23 backdrop-blur-sm">06/17<br>04/16</span>
                     <span class="border-slate-200 dark:border-dark-border border-t-1 w-full h-1 col-span-1 hidden xl:block xl:col-span-2 mt-4"></span> 
                     <article class="card col-span-12 xl:col-span-10 xl:col-start-3 z-10 backdrop-blur-sm">
