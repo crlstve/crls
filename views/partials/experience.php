@@ -10,11 +10,11 @@
                             <?= Functions::svg(); ?>
                         </a>
                         <article class="card-body">
-                            <header class="card-head border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 xl:block dark:[--pattern-fg:var(--color-white)]/10 h-full py-12 w-10  mx-auto ">
+                            <header class="card-head border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 xl:block dark:[--pattern-fg:var(--color-white)]/10 py-12 w-10  mx-auto ">
                                 <span class="card-title-line"></span>
                                 <h3 class="card-title">cámara valencia</h3>
                             </header>
-                            <div class="card-content self-center px-6">
+                            <div class="card-content self-center py-10 pl-4 pr-10">
                                 <p class="text-sm leading-normal">
                                     Actualización y mantenimiento de la web corporativa de la empresa. Desarrollo de nuevas funcionalidades y mejoras en la experiencia de usuario. Programación con <b>Wordpress</b> y <b>Laravel</b>. Desarrollo de <b>APIS REST</b>.
                                 </p>
@@ -41,11 +41,11 @@
                             <?= Functions::svg(); ?>
                         </a>
                         <article class="card-body flex flex-row-reverse">
-                            <header class="card-head border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 xl:block dark:[--pattern-fg:var(--color-white)]/10 h-full py-12 w-10  mx-auto ">
+                            <header class="card-head border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 xl:block dark:[--pattern-fg:var(--color-white)]/10 py-12 w-10  mx-auto ">
                                 <h3 class="card-title rotate-0!">idital</h3>
                                 <span class="card-title-line"></span>
                             </header>
-                            <div class="card-content self-center px-6">
+                            <div class="card-content self-center py-10 pr-4 pl-10">
                                 <p class="text-sm leading-normal">
                                     Desarrollo de webs y aplicaciones a medida para clientes de la empresa. Programación con <b>Laravel</b><b>Wordpress</b> y <b>Vue.js</b>. Desarrollo de <b>APIS REST</b> y <b>APIS GraphQL</b>. Integración con <b>APIS de terceros</b>.
                                 </p>
