@@ -30,13 +30,13 @@
                                 </ul>
                             </div>
                        </article>
-                    <span class="time-l w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-right-[42%]">
+                    <span class="time-l w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-right-[42%] dark:bg-dark">
                         actual 04/25
                     </span>
 
                 </li>
                 <!-- Idital -->
-                <li class="card relative p-2 xl:p-0 snap-always xl:col-start-10 xl:col-span-6 fadeInUp visible bg-transparent backdrop-blur-sm flex flex-row justify-between mt-24">
+                <li class="card relative p-2 xl:p-0 snap-always xl:col-start-10 xl:col-span-6 fadeInUp visible bg-transparent backdrop-blur-sm flex flex-row justify-between lg:mt-48">
                         <a rel="nofollow noopener noreferrer" target="_blank" aria-label="Visita la web de Idital" href="https://www.idital.com/" class="link-left">
                             <?= Functions::svg(); ?>
                         </a>
@@ -59,13 +59,13 @@
                                 </ul>
                             </div>
                        </article>
-                    <span class="time-r w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-left-[40%]">
+                    <span class="time-r w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-left-[41%] dark:bg-dark">
                         04/25<br>10/24
                     </span>
 
                 </li>
                 <!-- Founderz -->
-                <li class="card relative p-2 xl:p-0 snap-always xl:col-span-6 fadeInUp bg-transparent backdrop-blur-sm flex flex-row justify-between">
+                <li class="card relative p-2 xl:p-0 snap-always xl:col-span-6 fadeInUp bg-transparent backdrop-blur-sm flex flex-row justify-between lg:-mt-30">
                         <a rel="nofollow noopener noreferrer" target="_blank" aria-label="Visita la web de Founderz" href="https://founderz.com/" class="link-right">
                             <?= Functions::svg(); ?>
                         </a>
@@ -88,20 +88,20 @@
                                 </ul>
                             </div>
                        </article>
-                    <span class="time-l w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-right-[42%]">
+                    <span class="time-l w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-right-[42%] dark:bg-dark">
                         09/24<br>04/24
                     </span>
 
                 </li>
                 <!-- Sesame HR -->
-                <li class="card relative p-2 xl:p-0 snap-always xl:col-start-10 xl:col-span-6 fadeInUp bg-transparent backdrop-blur-sm flex flex-row justify-between">
+                <li class="card relative p-2 xl:p-0 snap-always xl:col-start-10 xl:col-span-6 fadeInUp bg-transparent backdrop-blur-sm flex flex-row justify-between lg:mt-16">
                         <a rel="nofollow noopener noreferrer" target="_blank" aria-label="Visita la web de Sesame HR" href="https://www.sesamehr.es/" class="link-left">
                             <?= Functions::svg(); ?>
                         </a>
                         <article class="card-body flex-row-reverse">
                             <header class="card-head border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 xl:block dark:[--pattern-fg:var(--color-white)]/10 h-full py-12 w-10  mx-auto ">
-                                <span class="card-title-line"></span>
                                 <h3 class="card-title rotate-0!">sesame hr</h3>
+                                <span class="card-title-line"></span>
                             </header>
                             <div class="card-content self-center px-6">
                                 <p class="text-sm leading-normal">
@@ -117,7 +117,7 @@
                                 </ul>
                             </div>
                        </article>
-                    <span class="time-l w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-left-[42%]">
+                    <span class="time-l w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-left-[42%] dark:bg-dark">
                         04/24<br>06/22
                     </span>
 
