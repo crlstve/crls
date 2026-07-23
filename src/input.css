@@ -9,7 +9,7 @@
     --color-light: rgba(255 255 255 / var(--tw-bg-opacity, 1));
     --color-dark: rgba(18 18 18 / var(--tw-bg-opacity, 1));
     --color-dark-border: oklch(0.34 0 0);
-    --color-primary: rgb(154 255 0 / var(--tw-text-opacity, 1));
+    --color-primary: rgb(202 255 61 / var(--tw-text-opacity, 1));
     --color-secondary: #3b82f6;
     --color-red: rgb(255 91 91 / var(--tw-text-opacity, 1));
 
@@ -126,9 +126,10 @@ p,span,label,li,td,th {
             width: 87px;
             height: 1px;
             background-color: var(--color-dark-border);
-            top: 50%;
+            top: 27%;
             left: 0;
             transform: translateX(-100%);
+            z-index: -1;
         }
 
         .time-r::before{
@@ -137,9 +138,10 @@ p,span,label,li,td,th {
             width: 87px;
             height: 1px;
             background-color: var(--color-dark-border);
-            top: 50%;
+            top: 27%;
             left: 0;
             transform: translateX(100%);
+            z-index: -1;
         }
     
 
