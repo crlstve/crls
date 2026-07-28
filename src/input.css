@@ -11,7 +11,7 @@
     --color-dark-border: oklch(0.34 0 0);
     --color-primary: rgb(202 255 61 / var(--tw-text-opacity, 1));
     --color-secondary: #3b82f6;
-    --color-red: rgb(255 91 91 / var(--tw-text-opacity, 1));
+    --color-red: rgba(255 10 96 / var(--tw-text-opacity, 1));
 
 }
 @font-face {
@@ -19,7 +19,7 @@
   font-style: normal;
   font-weight: 100;
   font-display: swap;
-  src: url("../fonts/Orbitron-medium.woff2") format("woff2");
+  src: url("../fonts/Play-Regular.woff2") format("woff2");
 }
 @font-face {
   font-family: code;
@@ -43,7 +43,7 @@ p,span,label,li,td,th {
 }
 
     .btn_nav{
-        @apply text-gray-600 text-center self-center font-semibold dark:text-white text-base md:text-sm relative md:border border-slate-200 hover:border-dark-border hover:dark:border-primary dark:border-dark-border backdrop-blur hover:backdrop-blur-none flex justify-center px-4 py-1 dark:hover:text-primary hover:text-red mb-4 md:mb-0;
+        @apply text-gray-600 text-center self-center font-semibold dark:text-white text-base md:text-sm relative md:border border-slate-200 hover:border-red hover:dark:border-primary dark:border-dark-border backdrop-blur hover:backdrop-blur-none flex justify-center px-4 py-1 dark:hover:text-primary hover:text-red mb-4 md:mb-0;
     }
     /*Form*/
         .btnError{ 
@@ -85,7 +85,18 @@ p,span,label,li,td,th {
             @apply -rotate-140;
         }
         .card{
-            @apply relative flex flex-col h-fit gap-3  min-w-0 border border-slate-200 dark:border-dark-border backdrop-blur-sm;
+            @apply relative isolate flex flex-col h-fit gap-3  min-w-0 border border-slate-200 dark:border-dark-border backdrop-blur-sm;
+            /* Degradado de la estela de píxeles: el acento del tema va primero */
+            --pixel-from: 255 10 96;
+            --pixel-to: 202 255 61;
+        }
+        :where(.dark) .card{
+            --pixel-from: 202 255 61;
+            --pixel-to: 255 10 96;
+        }
+        /* Lienzo del rastro: detrás del contenido de la card (ver card-pixels.js) */
+        .card-pixels{
+            @apply absolute inset-0 -z-10 pointer-events-none;
         }
 
         .tags{
@@ -96,13 +107,13 @@ p,span,label,li,td,th {
         }
         /* Cabecera de card con título vertical (abajo->arriba) y línea a media altura */
         .card-body{
-            @apply flex gap-4 min-w-0;
+            @apply flex min-w-0;
         }
         .card-content{
-            @apply flex flex-col gap-3 flex-1 min-w-0;
+            @apply flex flex-col gap-7 flex-1 min-w-0 self-center py-10 px-10;
         }
         .card-head{
-            @apply flex flex-col items-center gap-3 shrink-0;
+            @apply flex flex-col items-center gap-3 shrink-0 py-12 w-10 dark:bg-primary bg-red text-white dark:text-dark mx-auto;
         }
         .card-title{
             @apply font-bold leading-none tracking-[0.25em] [writing-mode:vertical-rl] rotate-180;
@@ -120,30 +131,13 @@ p,span,label,li,td,th {
                   writing-mode: sideways-lr;
             }
         
-        .time-l::after{
-            content: '';
-            position: absolute;
-            width: 87px;
-            height: 1px;
-            background-color: var(--color-dark-border);
-            top: 27%;
-            left: 0;
-            transform: translateX(-100%);
-            z-index: -1;
-        }
-
-        .time-r::before{
-            content: '';
-            position: absolute;
-            width: 87px;
-            height: 1px;
-            background-color: var(--color-dark-border);
-            top: 27%;
-            left: 0;
-            transform: translateX(100%);
-            z-index: -1;
-        }
-    
+        .time-l::after{ @apply absolute content-[""] w-[87px] h-[1px] bg-slate-200 top-[27%] left-0 -translate-x-full z-[-1]; }
+        .time-r::before{ @apply absolute content-[""] w-[87px] h-[1px] bg-slate-200 top-[27%] left-0 translate-x-[113%] z-[-1]; }
+        /* dark: no se puede encadenar tras ::after/::before (compila a un :where() vacío),
+           así que la variante tiene que ir en un ancestro */
+        :where(.dark) .time-l::after,
+        :where(.dark) .time-r::before{ @apply bg-dark-border; }
+     
 
 /*******************************************************************************
  *  CARGA STYLE
