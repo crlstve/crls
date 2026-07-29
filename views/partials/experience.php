@@ -1,20 +1,20 @@
-    <section id="experiencia" class="max-w-6xl mx-auto mb-6 xl:py-12 flex flex-col relative">
+    <section id="experiencia" class="max-w-6xl mx-auto mb-6 px-2 lg:px-0 xl:py-12 flex flex-col relative">
 
         <h2 data-text="experiencia" class="w-fit mx-auto font-title p-6 text-3xl xl:text-2xl text-center font-bold leading-6 mb-6">experiencia</h2>
 
-        <div class=" snap-y snap-mandatory ">
+        <div class="snap-y snap-mandatory">
             <ul class="timeline grid grid-cols-1 xl:grid-cols-15 gap-7 xl:my-12 bg-transparent relative">
                 <!-- Cámara Valencia -->
                 <li class="card relative p-2 xl:p-0 snap-always xl:col-span-6 fadeInUp visible bg-transparent backdrop-blur-sm flex flex-row justify-between">
-                        <a rel="nofollow noopener noreferrer" target="_blank" aria-label="Visita la web de Cámara Valencia" href="https://www.camaravalencia.com/" class="link-right">
+                        <a class="link-right" href="https://www.camaravalencia.com/" target="_blank" aria-label="Visita la web de Cámara Valencia" rel="nofollow noopener noreferrer">
                             <?= Functions::svg(); ?>
                         </a>
                         <article class="card-body">
-                            <header class="card-head border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 xl:block dark:[--pattern-fg:var(--color-white)]/10 py-12 w-10  mx-auto ">
+                            <a class="card-head" href="https://www.camaravalencia.com/" target="_blank" aria-label="Visita la web de Cámara Valencia" rel="nofollow noopener noreferrer">
                                 <span class="card-title-line"></span>
-                                <h3 class="card-title">cámara valencia</h3>
-                            </header>
-                            <div class="card-content self-center py-10 pl-4 pr-10">
+                                <h3 class="card-title dark:text-dark">cámara valencia</h3>
+                            </a>
+                            <div class="card-content">
                                 <p class="text-sm leading-normal">
                                     Actualización y mantenimiento de la web corporativa de la empresa. Desarrollo de nuevas funcionalidades y mejoras en la experiencia de usuario. Programación con <b>Wordpress</b> y <b>Laravel</b>. Desarrollo de <b>APIS REST</b>.
                                 </p>
@@ -30,21 +30,21 @@
                                 </ul>
                             </div>
                        </article>
-                    <span class="time-l w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-right-[42%] dark:bg-dark">
+                    <span class="time-l w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-right-[42%] dark:bg-dark bg-white">
                         actual 04/25
                     </span>
 
                 </li>
                 <!-- Idital -->
-                <li class="card relative p-2 xl:p-0 snap-always xl:col-start-10 xl:col-span-6 fadeInUp visible bg-transparent backdrop-blur-sm flex flex-row justify-between lg:mt-48">
+                <li class="card relative p-2 xl:p-0 snap-always xl:col-start-10 xl:col-span-6 fadeInUp visible bg-transparent backdrop-blur-sm flex flex-row justify-between lg:mt-44">
                         <a rel="nofollow noopener noreferrer" target="_blank" aria-label="Visita la web de Idital" href="https://www.idital.com/" class="link-left">
                             <?= Functions::svg(); ?>
                         </a>
                         <article class="card-body flex flex-row-reverse">
-                            <header class="card-head border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 xl:block dark:[--pattern-fg:var(--color-white)]/10 py-12 w-10  mx-auto ">
+                            <a class="card-head" rel="nofollow noopener noreferrer" target="_blank" aria-label="Visita la web de Idital" href="https://www.idital.com/">
                                 <h3 class="card-title rotate-0!">idital</h3>
                                 <span class="card-title-line"></span>
-                            </header>
+                            </a>
                             <div class="card-content self-center py-10 pr-4 pl-10">
                                 <p class="text-sm leading-normal">
                                     Desarrollo de webs y aplicaciones a medida para clientes de la empresa. Programación con <b>Laravel</b><b>Wordpress</b> y <b>Vue.js</b>. Desarrollo de <b>APIS REST</b> y <b>APIS GraphQL</b>. Integración con <b>APIS de terceros</b>.
@@ -59,21 +59,21 @@
                                 </ul>
                             </div>
                        </article>
-                    <span class="time-r w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-left-[41%] dark:bg-dark">
+                    <span class="time-r w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-left-[41%] dark:bg-dark bg-white">
                         04/25<br>10/24
                     </span>
 
                 </li>
                 <!-- Founderz -->
-                <li class="card relative p-2 xl:p-0 snap-always xl:col-span-6 fadeInUp bg-transparent backdrop-blur-sm flex flex-row justify-between lg:-mt-30">
+                <li class="card relative p-2 xl:p-0 snap-always xl:col-span-6 fadeInUp bg-transparent backdrop-blur-sm flex flex-row justify-between lg:-mt-36">
                         <a rel="nofollow noopener noreferrer" target="_blank" aria-label="Visita la web de Founderz" href="https://founderz.com/" class="link-right">
                             <?= Functions::svg(); ?>
                         </a>
                         <article class="card-body">
-                            <header class="card-head border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 xl:block dark:[--pattern-fg:var(--color-white)]/10 h-full py-12 w-10  mx-auto ">
+                            <a class="card-head" rel="nofollow noopener noreferrer" target="_blank" aria-label="Visita la web de Founderz" href="https://founderz.com/">
                                 <span class="card-title-line"></span>
                                 <h3 class="card-title">founderz</h3>
-                            </header>
+                            </a>
                             <div class="card-content self-center px-6">
                                 <p class="text-sm leading-normal">
                                     Desarrollo web con <b>Wordpress</b> y <b>Laravel</b>. Liderar la modernización y rebranding completo de la web, programación de <b>bloques de Gutenberg</b>, <b>templates</b> y <b>plugins</b> para Wordpress. Desarrollo de <b>APIS REST</b>.
@@ -88,22 +88,22 @@
                                 </ul>
                             </div>
                        </article>
-                    <span class="time-l w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-right-[42%] dark:bg-dark">
+                    <span class="time-l w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-right-[42%] dark:bg-dark bg-white">
                         09/24<br>04/24
                     </span>
 
                 </li>
                 <!-- Sesame HR -->
-                <li class="card relative p-2 xl:p-0 snap-always xl:col-start-10 xl:col-span-6 fadeInUp bg-transparent backdrop-blur-sm flex flex-row justify-between lg:mt-16">
+                <li class="card relative p-2 xl:p-0 snap-always xl:col-start-10 xl:col-span-6 fadeInUp bg-transparent backdrop-blur-sm flex flex-row justify-between mt-3">
                         <a rel="nofollow noopener noreferrer" target="_blank" aria-label="Visita la web de Sesame HR" href="https://www.sesamehr.es/" class="link-left">
                             <?= Functions::svg(); ?>
                         </a>
                         <article class="card-body flex-row-reverse">
-                            <header class="card-head border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 xl:block dark:[--pattern-fg:var(--color-white)]/10 h-full py-12 w-10  mx-auto ">
+                            <a class="card-head" rel="nofollow noopener noreferrer" target="_blank" aria-label="Visita la web de Sesame HR" href="https://www.sesamehr.es/">
                                 <h3 class="card-title rotate-0!">sesame hr</h3>
                                 <span class="card-title-line"></span>
-                            </header>
-                            <div class="card-content self-center px-6">
+                            </a>
+                            <div class="card-content self-center py-10 pr-4 pl-10">
                                 <p class="text-sm leading-normal">
                                     Creación y mantenimiento de las distintas webs de la empresa. Desarrollo de la actualización y optimización de la web a nivel SEO y CRO de estas. Programación de <b>plugins</b>, <b>temas</b>, <b>bloques</b> y <b>APIS</b> para Wordpress. Desarrollo de landing pages para Hubspot con <b>Hubl</b>.
                                 </p>
@@ -117,21 +117,21 @@
                                 </ul>
                             </div>
                        </article>
-                    <span class="time-l w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-left-[42%] dark:bg-dark">
+                    <span class="time-r w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-left-[41%] dark:bg-dark bg-white">
                         04/24<br>06/22
                     </span>
 
                 </li>
                 <!-- Arte Regal -->
-                <li class="card relative p-2 xl:p-0 snap-always xl:col-span-6 fadeInUp bg-transparent backdrop-blur-sm flex flex-row justify-between">
+                <li class="card relative p-2 xl:p-0 snap-always xl:col-span-6 fadeInUp bg-transparent backdrop-blur-sm flex flex-row justify-between lg:-mt-46">
                         <a rel="nofollow noopener noreferrer" target="_blank" aria-label="Visita la web de Arte Regal Import" href="https://www.arteregal.com/" class="link-right">
                             <?= Functions::svg(); ?>
                         </a>
                         <article class="card-body">
-                            <header class="card-head border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 xl:block dark:[--pattern-fg:var(--color-white)]/10 h-full py-12 w-10  mx-auto ">
+                            <a class="card-head" rel="nofollow noopener noreferrer" target="_blank" aria-label="Visita la web de Arte Regal Import" href="https://www.arteregal.com/">
                                 <span class="card-title-line"></span>
                                 <h3 class="card-title">arte regal</h3>
-                            </header>
+                            </a>
                             <div class="card-content self-center px-6">
                                 <p class="text-sm leading-normal">
                                     Mantenimiento y actualización de la ecommerce de la empresa hecha con <b>Codeigniter</b>. Desarrollo de otras webs y ecommerce hechas con <b>Wordpress</b>. Desarrollo de <b>APIS</b>, <b>bloques</b>, <b>temas</b> y <b>plugins</b> para <b>Wordpress</b>.
@@ -145,7 +145,7 @@
                                 </ul>
                             </div>
                        </article>
-                    <span class="time-l w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-right-[42%]">
+                    <span class="time-l w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-right-[42%] dark:bg-dark bg-white">
                         06/22<br>10/20
                     </span>
 
@@ -156,10 +156,10 @@
                             <?= Functions::svg(); ?>
                         </a>
                         <article class="card-body flex-row-reverse">
-                            <header class="card-head border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 xl:block dark:[--pattern-fg:var(--color-white)]/10 h-full py-12 w-10  mx-auto ">
-                                <span class="card-title-line"></span>
+                            <a class="card-head" rel="nofollow noopener noreferrer" target="_blank" aria-label="Visita la web de Availand" href="https://availand.com/">
                                 <h3 class="card-title rotate-0!">availand</h3>
-                            </header>
+                                <span class="card-title-line"></span>    
+                            </a>
                             <div class="card-content self-center px-6">
                                 <p class="text-sm leading-normal">
                                     Mantenimiento y actualización de la ecommerce de la empresa hecha con <b>wordpress</b> y <b>woocommerce</b>. Desarrollo de <b>APIS</b>, <b>bloques</b>, <b>temas</b> de <b>Gutenberg</b> y <b>plugins</b>.
@@ -173,21 +173,21 @@
                                 </ul>
                             </div>
                        </article>
-                    <span class="time-l w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-left-[42%]">
+                    <span class="time-r w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-left-[41%] dark:bg-dark bg-white">
                         06/20<br>05/19
                     </span>
 
                 </li>
                 <!-- Tv Begin -->
-                <li class="card relative p-2 xl:p-0 snap-always xl:col-span-6 fadeInUp bg-transparent backdrop-blur-sm flex flex-row justify-between">
+                <li class="card relative p-2 xl:p-0 snap-always xl:col-span-6 fadeInUp bg-transparent backdrop-blur-sm flex flex-row justify-between lg:-mt-36">
                         <a rel="nofollow noopener noreferrer" target="" aria-label="Visita la web de Tv Begin" href="https://tvbgn.com/" class="link-right">
                             <?= Functions::svg(); ?>
                         </a>
                         <article class="card-body">
-                            <header class="card-head border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 xl:block dark:[--pattern-fg:var(--color-white)]/10 h-full py-12 w-10  mx-auto ">
+                            <a class="card-head">
                                 <span class="card-title-line"></span>
                                 <h3 class="card-title">tv begin</h3>
-                            </header>
+                            </a>
                             <div class="card-content self-center px-6">
                                 <p class="text-sm leading-normal">
                                     Creación y mantenmiento de webs para distintos clientes hechas con Wordpress. Creación de <b>APIS</b>, <b>bloques</b>, <b>plugins</b>, <b>temas</b> y <b>módulos</b> para resolver las necesidades de las emrpesas.
@@ -201,7 +201,7 @@
                                 </ul>
                             </div>
                        </article>
-                    <span class="time-l w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-right-[42%]">
+                    <span class="time-l w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-right-[42%] dark:bg-dark bg-white">
                         05/19<br>09/17
                     </span>
 
@@ -212,10 +212,10 @@
                             <?= Functions::svg(); ?>
                         </a>
                         <article class="card-body flex-row-reverse">
-                            <header class="card-head border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 xl:block dark:[--pattern-fg:var(--color-white)]/10 h-full py-12 w-10  mx-auto ">
-                                <span class="card-title-line"></span>
+                            <a class="card-head" rel="nofollow noopener noreferrer" target="" aria-label="Visita la web de Galaxa Cosmetics" href="https://productos-peluqueria-online.es/">
                                 <h3 class="card-title rotate-0!">galaxa cosmetics</h3>
-                            </header>
+                                <span class="card-title-line"></span>
+                            </a>
                             <div class="card-content self-center px-6">
                                 <p class="text-sm leading-normal">
                                     Desarrollo de la ecommerce de la empresa hecha con <b>wordpress</b> y <b>woocommerce</b>. Desarollo de <b>plugins</b>, <b>APIS</b>, <b>temas</b> y <b>módulos</b> para las necesidades de la empresa
@@ -229,7 +229,7 @@
                                 </ul>
                             </div>
                        </article>
-                    <span class="time-l w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-left-[42%]">
+                    <span class="time-r w-[100px] h-[60px] py-2 px-6 text-sm leading-normal text-center flex justify-center items-center border border-slate-200 dark:border-dark-border xl:absolute xl:top-0 xl:-left-[41%] dark:bg-dark bg-white">
                         06/17<br>04/16
                     </span>
 
