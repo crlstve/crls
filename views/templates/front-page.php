@@ -1,6 +1,6 @@
 <?php Functions::partial('header'); ?>
 <main class="relative w-full min-h-dvh overflow-x-hidden ">
-    <canvas id="tutorial" class="fixed bottom-0 -z-10 opacity-20 dark:opacity-30 backdrop-blur-sm"></canvas>
+    <canvas id="tutorial" class="fixed bottom-0 -z-10 opacity-40 dark:opacity-30 backdrop-blur-sm"></canvas>
     <?php 
         Functions::partial('hero');
         
