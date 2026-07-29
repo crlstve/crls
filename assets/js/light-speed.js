@@ -33,6 +33,11 @@ function initStars() {
   }
 }
 
+// El tema lo marca la clase .dark del <html> (ver dark-mode.js)
+function isDarkMode() {
+  return document.documentElement.classList.contains("dark");
+}
+
 // El scroll inyecta velocidad; da igual la dirección (hacia arriba o abajo)
 function onScroll() {
   const y = window.scrollY || window.pageYOffset;
@@ -43,9 +48,15 @@ function onScroll() {
 function animate() {
   const halfWidth = canvas.width / 2;
   const halfHeight = canvas.height / 2;
+  const dark = isDarkMode();
 
-  ctx.fillStyle = "rgba(0,0,0,1)";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  if (dark) {
+    ctx.fillStyle = "rgba(0,0,0,1)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  } else {
+    // Lienzo transparente: deja ver el fondo blanco de la página
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
 
   // La velocidad decae hacia 0 cuando dejas de hacer scroll
   speed *= FRICTION;
@@ -75,7 +86,8 @@ function animate() {
     const size = 1 - (star.z / MAX_DEPTH) * 1.5;
     if (size <= 0) continue;                        // estrellas lejanas: invisibles
 
-    const shade = (size * 255) | 0;
+    // En oscuro las cercanas son blancas; en claro, grises oscuras
+    const shade = (dark ? size * 255 : 255 - size * 255) | 0;
     const ox = size * (px - halfWidth) * speed * LINE_LENGTH;
     const oy = size * (py - halfHeight) * speed * LINE_LENGTH;
 
